@@ -39,3 +39,38 @@ wobei $a$ der Betrag der Basisvektoren ist.
 
 \subsection{Beugung von Röntgenstrahlen an Kristallen}
 \label{sec:Beugung}
+Mit Röntgenstrahlung bezeichnet man elektromagnetische Wellen mit Energien zwischen $\SI{5}{\kilo\electronvolt}$
+und einigen hundert \si{\kilo\electronvolt}.
+Die Wechselwirkung von Röntgenstrahlung mit den Atomen eines Kristalls kann durch einen klassischen Streuprozess beschrieben werden.
+Da sowohl die Elektronen als auch die Atomkerne der Gitteratome durch das elektrische Wechselfeld  angeregt werden, beginnen sie selbst zu schwingen und elektrische Strahlung zu emittieren.
+Da sich die Gitteratome in einer räumlichen Symmertrie zueinander befinden, kann diese emittierte Strahlung miteinander interferieren.
+Damit die Streuwinkel gut messbar sind, sollte sich die Wellenlänge der Röntgenstrahlung in der Größenordnung \si{\angstrom} befinden.\\
+Die von der Röngenstrahlung angeregten Teilchen können als Hertzscher Dipol aufgefasst werden.
+Daher beträgt die Intensität der emittierten Strahlung
+\begin{equation}
+  \label{eq:5}
+I_\text{e}(r,\theta)=I_0\left(\frac{\mu_0 q^2}{4\pi m}\right)^2\frac{1+\cos^2(2\theta)}{2r^2}.
+\end{equation}
+Dabei ist $I_0$ die Intensität des einfallenden Strahles, $r$ die Distanz zum Dipol, $\mu_0$  die magnetische Feldkonstante\footnote{$\mu_0=\SI{1,2566e-6}{\newton\per\square\ampere}$}, $2\theta$ der Winkel zwischen einfallendem und gestreutem Strahl, $q$ die Ladung und $m$ die Masse des schwingenden Teilchens.
+Da die Intensität antiprotional zur Masse des schwingenden Teilchens ist, ist die Emission der Atomkerne vernachlässigbar gegenüber der Emission der Elektronen.
+Da die Ausdehnung der Elektronenhülle aufgrund der überharten Röntgenstrahlung nicht vernachlässigbar ist, kommt es zu einem Phasenunterschied $\Delta \varphi$ zwischen den Intensitäten der Strahlung durch die einzelnen Elektronen.
+Durch diesen Phasenunterschied unterscheidet sich die  Streuintensität $I_\text{a}$ eines Atoms mit der Kernladungszahl $z$ von der über die Formel \ref{eq:5} berechneten Streuintensität $I_\text{e}$.
+Das Verhältnis
+\begin{equation}
+  \frac{I_\text{a}}{I_\text{e}}=f^2
+\end{equation}
+dieser Intensitäten ist gleich dem Quadrat des Formfaktors $f$. Dieser Faktor berechnet sich durch die Fourier-Transformation der Ladungsverteilung $\rho(\vec r)$ der Elektronen:
+\begin{equation}
+  f=\int_\text{Hülle}\exp\left(i\Delta\varphi\right)\rho(\vec r)\,\d^3r.
+\end{equation}
+\begin{wrapfigure}{r}{0.4\textwidth}
+\includegraphics[width=0.4\textwidth]{abb8.jpg}
+\caption{Geometrische Überlegung zur Berechnung des Phasenunterschiedes $\Delta \varphi$ zweier Wellen die an den Punkten O und P gestreut werden. Abbildung entnommen aus \cite{V41}.}
+\label{abb:8}
+\end{wrapfigure}
+Durch geometrische Überlegungen, welche in Abbildung \ref{abb:8} dargestellt sind, wird deutlich, dass der Phasenunterschied
+\begin{equation}
+  \label{eq:7}
+  \Delta \varphi=2\pi \frac{\Delta s}{\lambda}=2\pi \frac{s_1+s_2}{\lambda}=2\pi\vec r \cdot \left(\vec k- \vec k_0\right)
+\end{equation}
+beträgt. 
