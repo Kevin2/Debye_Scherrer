@@ -1,0 +1,28 @@
+\subsection{Debye-Scherrer-Verfahren}
+
+Wird eine kristalline Probe mit monochromatischem Röntgenlicht bestrahlt, kann anhand des Beugungsmusters eine Aussage über die Gitterstruktur getroffen werden.
+Die Röntgenstrahlung wird an den Verschiedenen Netzebenen um den Beugungsinkel $\theta$ gestreut. Bei unterschiedlichen Gitterstrukturen löschen sich die
+Streuamplituden bestimmter Netzebenen aus. Dadurch kann Aufschluss über die Kristallstruktur gewonnen werden. Da Reflexionen nur auftreten, wenn der Bragg-Winkel getroffen wird,
+wird die zu unteruschende Probe zerkleinert. Dies ermöglicht eine statistische Verteilung der Ausrichtungen der Kristalle, wodurch die Bragg-Reflexionen ermöglicht werden.\newline
+Beim Debye-Scherrer-Verfahren können unterschiedliche systematische Fehler auftreten. Da die Beugung nur an einem schmalen Streifen der Probe stattfindet, werden die Winkel zu groß gemessen.
+Dieser Fehler ist vor allem bei kleinen Winkel ausschlaggebend. Um die Gitterkonstante richtig bestimmen zu können, wird der Korrekturfaktor
+\begin{equation}
+  \frac{\Delta a_\text{A}}{a} = \frac{\rho}{2R}\left(1 - \frac{R}{F} \right) \frac{\cos^2(\theta)}{\theta}
+\end{equation}
+eingeführt. Dabei ist $\rho$ der Probenradius, $R$ der Kameraradius und $F$ der Abstand vom Fokus zur Probe. Bei großen Winkel tritt ein weiterer systematischer Fehler auf. Die Probenachse liegt
+nicht genau auf der Achse des Films was zur Verschiebung der Strahlen führt. Aus diesem Grund wird eine weitere Korrektur, welche explizit
+\begin{equation}
+  \frac{\Delta a_\text{V}}{a} = \frac{V}{R} \cos^2(\theta)
+\end{equation}
+dargestellt werden kann, zur Bestimmung der Gitterkonstante verwendet. Um beide Korrekturen zu berücksichtigen wird der Ausdruck
+\begin{equation}
+  \Delta a_\text{ges} = \Delta a_\text{V} + \Delta a_\text{A}
+\end{equation}
+gebildet, welcher proportional zu $\cos^2$ ist. Durch das Auftragen der berechneten Gitterkonstanten gegen $\cos^2$ kann mit Hilfer einer linearen Ausgleichsrechnung die beste
+Gitterkonstante bestimmt werden, da sich ein linearer Zusammenhang zwischen $a(\theta)$ und $\cos^2(\theta)$ zeigt.
+
+\subsection{Charackeristika der Röntgenröhre}
+
+In der Röntgenröhre entsteht sowohl $K_\alpha$-Strahlung, als auch $K_\beta$-Strahlung. Da die $K_\beta$-Strahlung für den Versuch nicht verwendet werden soll, wird diese mit Hilfe eines Filters entfernt.
+Die Anwendung des Filters führt dazu, dass die $K_\alpha$-Strahlung in die $K_{\alpha_1}$-Linie und in die $K_{\alpha_2}$-Linie unterteilt wird, welche sich jedoch nicht mehr von einander trennen
+lassen. Dies führt bei hohen Reflexionswinkeln zu einer Ringaufspaltung, die bei der Auswertung des Beugungsmusters berücksichtigt werden muss.
