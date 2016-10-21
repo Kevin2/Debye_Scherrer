@@ -73,4 +73,25 @@ Durch geometrische Überlegungen, welche in Abbildung \ref{abb:8} dargestellt si
   \label{eq:7}
   \Delta \varphi=2\pi \frac{\Delta s}{\lambda}=2\pi \frac{s_1+s_2}{\lambda}=2\pi\vec r \cdot \left(\vec k- \vec k_0\right)
 \end{equation}
-beträgt. 
+beträgt.
+Um nun die Streuung am Kristallgitter zu beschreiben, muss  der Phasenunterschied zwischen zwei Wellen, die an unterschiednlichen Atomen in der Elementarzelle gestreut werden, bekannt sein.
+Wenn das eine Atom sich im Ursprung des Koordinatensystems befindet und sich der Platz des anderen Atoms durch den Ortsvektor $\vec r_j$ beschreiben lässt, beträgt diese Phasendifferenz
+\begin{equation}
+  \Delta \varphi_j = 2\pi \vec r_j\cdot \left(\vec k-\vec k_0\right).
+\end{equation}
+Die gesamte Streuamplitude $A$ berechnet sich durch die Summe aller einzelnen Intensitäten:
+\begin{equation}
+  A=\sum_jf_j\exp\left(-2\pi i \vec r _j\cdot\left(\vec k-\vec k_0\right)\right)I_\text{e},
+\end{equation}
+wobei $f_j$ der Formfaktor des entsprechendes Atoms ist.
+Stellt man nun die Ortsvektoren durch die Basisvektoren $\vec a_i$ dar, erhält man die Strukturamplitude
+\begin{equation}
+  S=\sum_jf_j\exp\left(-2\pi i \left(x_j\vec a_1+x_j\vec a_2+x_j\vec a_3 \right)\cdot\left(\vec k-\vec k_0\right)\right)I_\text{e}.
+\end{equation}
+Dabei gilt für die Beträge der Basisvektoren $|\vec a_i|\le 1$.
+Das Betragsquadrat der Strukturamplitude  $|S^2|=SS^*$ heißt Strukturfaktor und gibt das Verhältnis von einer Elementarzelle und von einem einzelnen Elektron gestreuten Intensitäten an.
+Um Streuung an Elementarzellen, die in einem periodischen Gitter angeordnet sind, zu betrachten, wird eine Elementarzelle als punktförmig angenommen, sodass die Bragg-Bedingung
+\begin{equation}
+  n\lambda=2d\sin\left(\theta\right)~~~\text{mit}~n=1,2,...
+\end{equation}
+gilt.
