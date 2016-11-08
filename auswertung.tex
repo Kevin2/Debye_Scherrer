@@ -155,11 +155,56 @@ den y-Werten berücksichtigt.
 
 \subsection{Ergebnisse für Metall 2}
 
+In Tabelle \ref{tab:salz} sind die Messwerte für die Probe Salz 2 zu sehen. Zusätzlich sind die berechneten Winkel, die berechneten Gitterabstände und die
+daraus resultierenden Verhältnisse $d_1 / d_\text{i}$ zu erkennen.\newline
+Ein Vergleich von $d_1 / d_\text{i}$ mit $\sqrt[]{N_\text{i}\, / \, N_1}$ zeigt, dass es sich bei der Probe um eine bcc-Gitterstruktur handelt.
+Somit werden die
+Referenzwerte für die bcc-Gitterstruktur zur Berechnung der Gitterkonstanten verwendet. Die Werte für die Gitterkonstanten sind in der letzten Spalte von
+Tabelle \ref{tab:salz} zu finden. In Abbildung \ref{abb:salz} sind die einzelnen Gitterkonstanten gegen $\cos^2(\theta)$ aufgetragen. Die lineare Ausgleichsrechnung liefert
+die Parameter
+\begin{align*}
+  m &= -0,3\pm0,1~~~\text{und}\\
+  a &= 4,15\pm0,04
+\end{align*}
+Der Wert $a = 4,15\pm0,04$ für den y-Achsenabschnitt entspricht der Gitterkonstante der Probe.
+
+
+\begin{table}[H]
+  \centering
+\begin{tabular}{
+  S[table-format=2.1(1)]
+  S[table-format=2.2(2)]
+  S[table-format=1.3(3)]
+  S[table-format=1.3]
+  S[table-format=2]
+  S[table-format=1.2(2)]}
+  \toprule
+  $\text{r / mm}$ & $\theta\text{ / } ^\circ$ &{$d_1 / d_i\,\,/\,\, \si{\angstrom}$} & $\sqrt[]{N_\text{i}\, / \, N_1}_\text{bcc}$& $\text{N}$  &  $\text{a / }\si{\angstrom}$  \\ \midrule
+  32    \pm  1,0    &     16,0 \pm 0,5     &    1,00 \pm 0,00     &   1,000 &  2   &    4,00 \pm 0,10       \\
+  46,5  \pm  1,0    &     23,3 \pm 0,5     &    1,43 \pm 0,05     &   1,414 &  4   &    3,91 \pm 0,08       \\
+  56    \pm  1,0    &     28,0 \pm 0,5     &    1,70 \pm 0,06     &   1,732 &  6   &    4,02 \pm 0,07       \\
+  66	  \pm  1,0    &     33,0 \pm 0,5     &    1,98 \pm 0,07     &   2,000 &  8   &    4,01 \pm 0,05       \\
+  74    \pm  1,0    &     37,0 \pm 0,5     &    2,18 \pm 0,07     &   2,236 &  10  &    4,05 \pm 0,05       \\
+  79    \pm  1,0    &     39,5 \pm 0,5     &    2,31 \pm 0,07     &   2,449 &  12  &    4,20 \pm 0,04       \\
+  89    \pm  1,0    &     44,5 \pm 0,5     &    2,54 \pm 0,08     &   2,646 &  14  &    4,12 \pm 0,04       \\
+  105   \pm  1,0    &     52,5 \pm 0,5     &    2,88 \pm 0,09     &   2,828 &  16  &    3,89 \pm 0,03       \\
+  113   \pm  1,0    &     56,5 \pm 0,5     &    3,03 \pm 0,09     &   3,000 &  18  &    3,92 \pm 0,02       \\
+  117   \pm  1,0    &     58,5 \pm 0,5     &    3,10 \pm 0,10     &   3,162 &  20  &    4,05 \pm 0,02       \\
+  121   \pm  1,0    &     60,5 \pm 0,5     &    3,20 \pm 0,10     &   3,317 &  22  &    4,16 \pm 0,02       \\
+  132   \pm  1,0    &     66,0 \pm 0,5     &    3,30 \pm 0,10     &   3,464 &  24  &    4,14 \pm 0,02       \\
+  143   \pm  1,0    &     71,5 \pm 0,5     &    3,44 \pm 0,11     &   3,606 &  26  &    4,15 \pm 0,01       \\
+  \bottomrule
+\end{tabular}
+\caption{Messwerte und Ergebnisse für die Probe Salz 2. Es sind die Abstände der Braggreflexe, die Winkel $\theta$, die Netzebenenabstände, sowie die Verhältnisse
+$d_1 / d_\text{i}$ angegeben. Zusätzlich sind die Werte für $\sqrt[]{N_\text{i}\, / \, N_1}_\text{bcc}$ mit dem passenden $N$ aufgelistet, damit die Gitterstruktur erkennbar wird.
+In der letzten Spalte befinden sich die jeweiligen Werte für die Gitterkonstante $a$.}
+\label{tab:salz}
+\end{table}
 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.5]{probe1.pdf}
+  \includegraphics[scale=0.48]{probe1.pdf}
   \caption{metall}
   \label{abb:metall}
 \end{figure}
@@ -168,39 +213,54 @@ den y-Werten berücksichtigt.
 
 In Tabelle \ref{tab:salz} sind die Messwerte für die Probe Salz 2 zu sehen. Zusätzlich sind die berechneten Winkel, die berechneten Gitterabstände und die
 daraus resultierenden Verhältnisse $d_1 / d_\text{i}$ zu erkennen.
-\begin{table}
+\begin{table}[H]
   \centering
 \begin{tabular}{
   S[table-format=2.1(1)]
   S[table-format=2.2(2)]
   S[table-format=1.3(3)]
+  S[table-format=1.3]
+  S[table-format=2]
   S[table-format=1.2(2)]}
   \toprule
-  $\text{r / mm}$ & $\theta\text{ / } ^\circ$ &$\text{d}$ &  $\text{bla}$  \\ \midrule
-
+  $\text{r / mm}$ & $\theta\text{ / } ^\circ$ &{$d_1 / d_i\,\,/\,\, \si{\angstrom}$} & $\sqrt[]{N_\text{i}\, / \, N_1}_\text{bcc}$& $\text{N}$  &  $\text{a / }\si{\angstrom}$  \\ \midrule
+  32    \pm  1,0    &     16,0 \pm 0,5     &    1,00 \pm 0,00     &   1,000 &  2   &    4,00 \pm 0,10       \\
+  46,5  \pm  1,0    &     23,3 \pm 0,5     &    1,43 \pm 0,05     &   1,414 &  4   &    3,91 \pm 0,08       \\
+  56    \pm  1,0    &     28,0 \pm 0,5     &    1,70 \pm 0,06     &   1,732 &  6   &    4,02 \pm 0,07       \\
+  66	  \pm  1,0    &     33,0 \pm 0,5     &    1,98 \pm 0,07     &   2,000 &  8   &    4,01 \pm 0,05       \\
+  74    \pm  1,0    &     37,0 \pm 0,5     &    2,18 \pm 0,07     &   2,236 &  10  &    4,05 \pm 0,05       \\
+  79    \pm  1,0    &     39,5 \pm 0,5     &    2,31 \pm 0,07     &   2,449 &  12  &    4,20 \pm 0,04       \\
+  89    \pm  1,0    &     44,5 \pm 0,5     &    2,54 \pm 0,08     &   2,646 &  14  &    4,12 \pm 0,04       \\
+  105   \pm  1,0    &     52,5 \pm 0,5     &    2,88 \pm 0,09     &   2,828 &  16  &    3,89 \pm 0,03       \\
+  113   \pm  1,0    &     56,5 \pm 0,5     &    3,03 \pm 0,09     &   3,000 &  18  &    3,92 \pm 0,02       \\
+  117   \pm  1,0    &     58,5 \pm 0,5     &    3,10 \pm 0,10     &   3,162 &  20  &    4,05 \pm 0,02       \\
+  121   \pm  1,0    &     60,5 \pm 0,5     &    3,20 \pm 0,10     &   3,317 &  22  &    4,16 \pm 0,02       \\
+  132   \pm  1,0    &     66,0 \pm 0,5     &    3,30 \pm 0,10     &   3,464 &  24  &    4,14 \pm 0,02       \\
+  143   \pm  1,0    &     71,5 \pm 0,5     &    3,44 \pm 0,11     &   3,606 &  26  &    4,15 \pm 0,01       \\
   \bottomrule
 \end{tabular}
 \caption{Messwerte und Ergebnisse für die Probe Salz 2. Es sind die Abstände der Braggreflexe, die Winkel $\theta$, die Netzebenenabstände, sowie die Verhältnisse
-$d_1 / d_\text{i}$ zu erkennen. In der letzten Spalte befinden sich die jeweiligen Werte für die Gitterkonstante $a$.}
+$d_1 / d_\text{i}$ angegeben. Zusätzlich sind die Werte für $\sqrt[]{N_\text{i}\, / \, N_1}_\text{bcc}$ mit dem passenden $N$ aufgelistet, damit die Gitterstruktur erkennbar wird.
+In der letzten Spalte befinden sich die jeweiligen Werte für die Gitterkonstante $a$.}
 \label{tab:salz}
 \end{table}
 
 
-
-
-Ein Vergleich von $d_1 / d_\text{i}$ mit den $\sqrt[]{N_\text{i}\, / \, N_1}$-Spalten in Tabelle
-\ref{tab:referenz} zeigt, dass es sich bei der Probe um eine bcc-Gitterstruktur handelt. Es könnte sich somit um eine Cäsiumchlorid-Struktur handeln. Somit werden die
+Ein Vergleich von $d_1 / d_\text{i}$ mit $\sqrt[]{N_\text{i}\, / \, N_1}$ zeigt, dass es sich bei der Probe um eine bcc-Gitterstruktur handelt.
+Somit werden die
 Referenzwerte für die bcc-Gitterstruktur zur Berechnung der Gitterkonstanten verwendet. Die Werte für die Gitterkonstanten sind in der letzten Spalte von
 Tabelle \ref{tab:salz} zu finden. In Abbildung \ref{abb:salz} sind die einzelnen Gitterkonstanten gegen $\cos^2(\theta)$ aufgetragen. Die lineare Ausgleichsrechnung liefert
-einen y-Achsenabschnitt von
-\begin{equation}
-  a = 4,02\pm0,03.
-\end{equation}
-Dieser Wert ist das Ergebnis für die Gitterkonstante der Probe.
+die Parameter
+\begin{align*}
+  m &= -0,3\pm0,1~~~\text{und}\\
+  a &= 4,15\pm0,04
+\end{align*}
+Der Wert $a = 4,15\pm0,04$ für den y-Achsenabschnitt entspricht der Gitterkonstante der Probe.
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{probe2.pdf}
-  \caption{salz}
+  \caption{In der Abbildung sind die Gitterkonstanten $a$ gegen $\cos^2(\theta)$ für die Probe Salz 2 aufgetragen. Zusätzlich ist die mit der Ausgleichsrechnung
+  ermittelte Gerade zu erkennen.}
   \label{abb:salz}
 \end{figure}
