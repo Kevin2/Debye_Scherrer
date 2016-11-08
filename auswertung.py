@@ -17,7 +17,7 @@ plt.rcParams.update({'font.size': 18})
 
 l = 1.54286
 
-Ndiamant = np.array([3, 4, 8, 11, 16, 19, 24, 27, 32, 35,36,1])
+Ndiamant = np.array([3, 4, 8, 11, 16, 19, 24, 27, 32, 35,36])
 
 Ncaesiumchlorid = np.array([2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26])
 
@@ -121,7 +121,7 @@ plt.plot(x, coeff[1]*x+coeff[0], 'r-', label='Ausgleichsgerade')
 plt.xlabel(r"$\mathrm{cos^2(\theta)}$", fontsize=20)
 plt.ylabel(r"$\mathrm{a\,\, /\,\, 10^{-10}\,m}$", fontsize=20)
 plt.legend(loc=2)
-plt.savefig('probe1.pdf')
+plt.savefig('probe1.pdf', bbox_inches='tight', pad_inches=0.5)
 
 
 
@@ -226,4 +226,4 @@ plt.plot(x, coeff[1]*x+coeff[0], 'r-', label='Ausgleichsgerade')
 plt.xlabel(r"$\mathrm{cos^2(\theta)}$", fontsize=20)
 plt.ylabel(r"$\mathrm{a\,\, /\,\, 10^{-10}\,m}$", fontsize=20)
 plt.legend(loc=2)
-plt.savefig('probe2.pdf')
+plt.savefig('probe2.pdf', bbox_inches='tight', pad_inches=0.5)
