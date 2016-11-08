@@ -17,7 +17,7 @@ plt.rcParams.update({'font.size': 18})
 
 l = 1.54286
 
-Ndiamant = np.array([3, 8, 11, 16, 19, 24, 27, 32, 35, 40, 43, 48, 51])
+Ndiamant = np.array([3, 4, 8, 11, 16, 19, 24, 27, 32, 35,36,1])
 
 Ncaesiumchlorid = np.array([2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26])
 
@@ -31,7 +31,9 @@ Ncaesiumchlorid = np.array([2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26])
 # Einlesen der Daten #
 ######################
 
-r , rerr = np.genfromtxt('werte1m.txt', unpack=True)
+r , rerr = np.genfromtxt('werte1.txt', unpack=True)
+#r = 180-r
+#r=r[::-1]
 
 rges = unp.uarray(r, rerr)
 
@@ -42,16 +44,15 @@ print(theta)
 
 d = l/(2 * unp.sin(2*np.pi*theta/360))
 
-d1 = l/(2 * unp.sin(2*np.pi*theta[0]/360))
-
 print('d in Angström')
 print(d)
 
-verhaeltnis = d1 / d
+verhaeltnis = d[0] / d
 
 print('d1/d')
 print(verhaeltnis)
 
+################plot
 a = d * (Ndiamant)**(0.5)
 
 print('a in Angström')
@@ -134,7 +135,7 @@ plt.savefig('probe1.pdf')
 # Einlesen der Daten #
 ######################
 
-r, rerr = np.genfromtxt('werte2m.txt', unpack=True)
+r, rerr = np.genfromtxt('werte22.txt', unpack=True)
 
 rges = unp.uarray(r, rerr)
 
@@ -155,6 +156,7 @@ verhaeltnis = d1 / d
 print('d1/d')
 print(verhaeltnis)
 
+
 a = d * (Ncaesiumchlorid)**(0.5)
 
 print('a in Angström')
@@ -164,7 +166,8 @@ theta1 = unp.nominal_values(theta)
 theta2 = unp.std_devs(theta)
 a1 = unp.nominal_values(a)
 a2 = unp.std_devs(a)
-
+print(theta1)
+print((np.cos((2*np.pi)/360*theta1))**2)
 #print(theta1, theta2)
 
 

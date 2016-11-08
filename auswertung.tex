@@ -1,0 +1,206 @@
+\section{Auswertung}
+
+Zur Auswertung der Messdaten werden die üblichen Formeln für den Mittelwert und die Standardabweichung verwendet. Die Fehlerrechnung wird mittels
+Gaußscher Fehlerfortpflanzung durchgeführt. Zusätzlich werden Python 3.5.2 für die Berechnungen, matplotlib.pyplot zum Erstellen der Graphen und
+scipy.odr zur Durchführung der lineare Ausgleichsrechnung benutzt.
+
+\subsection{Bestimmung der Gitterstruktur mit Hilfe der Braggreflexe}
+
+
+
+Der entwickelte Film enthält kreiförmige Braggreflexe, die charakteristisch für die jeweillige Probe sind. Anhand der Reflexe kann auf die Gitterstruktur der
+Probe geschlossen werden und die Gitterkonstante kann bestimmt werden.
+Als Referenzwerte werden die Miller'schen Indizes in Gleichung \eqref{eq:streuamplitude} variert und die Reflexe ermittelt, für die die Streuamplitude nicht verschwindet.
+Die Ergebnisse für
+verschiedene Gitterstrukturen sind in Tabelle \ref{tab:referenz} dargestellt.\newline
+Nun sollen die Reflexe auf dem Film mit den Referenzwerten in der Tabelle verglichen werden. Dafür wird der Abstand der Reflexe vom Eintrittsloch der Kamera bestimmt. Ein
+Vorteil dabei besteht darin, dass die Kamera einen Umfang von genau $\SI{360}{\milli\meter}$ besitzt. Somit können die Abstände direkt als Winkelmaß
+$2\theta$ abgelesen und in Gradmaß umgerechnet werden. Mit Hilfe der Braggbedingung \eqref{eq:bragg} und der Wellenlänge der Röntgenstrahlung von
+$\lambda = \SI{1,54286}{\angstrom}$, welche sich aus dem Mittelwert der $K_\alpha$- und der
+
+\begin{table}[H]
+  \centering
+  \begin{subtable}{.49\textwidth}
+      \centering
+      \begin{tabular}{
+          S[table-format=3.0]
+          S[table-format=2.0]
+          S[table-format=1.3]}
+          \toprule
+          $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_\text{i}\, / \, N_1}$ \\ \midrule
+          100 & 1   & 1,000 \\
+          110 & 2   & 1,414 \\
+          111 & 3   & 1,732 \\
+          200 & 4   & 2,000 \\
+          210 & 5   & 2,236 \\
+          211 & 6   & 2,449 \\
+          220 & 8   & 2,828 \\
+          221 & 9   & 3,000 \\
+          300 & 9   & 3,000 \\
+          310 & 10  & 3,162 \\
+          311 & 11  & 3,317 \\
+          222 & 12  & 3,464 \\
+          320 & 13  & 3,606 \\
+          321 & 14  & 3,742 \\
+          400 & 16  & 4,000 \\
+          \bottomrule
+      \end{tabular}
+      \caption{sc-Gitterstruktur}
+    \end{subtable}
+    \begin{subtable}{.49\textwidth}
+        \centering
+    \begin{tabular}{
+        S[table-format=3.0]
+        S[table-format=2.0]
+        S[table-format=1.3]}
+        \toprule
+        $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_\text{i}\, / \, N_1}$ \\ \midrule
+        110 & 2   & 1,000 \\
+        200 & 4   & 1,414 \\
+        211 & 6   & 1,732 \\
+        220 & 8   & 2,000 \\
+        310 & 10  & 2,236 \\
+        222 & 12  & 2,449 \\
+        321 & 14  & 2,646 \\
+        400 & 16  & 2,828 \\
+        330 & 18  & 3,000 \\
+        411 & 18  & 3,000 \\
+        420 & 20  & 3,162 \\
+        332 & 22  & 3,317 \\
+        422 & 24  & 3,464 \\
+        431 & 26  & 3,606 \\
+        510 & 26  & 3,606 \\
+        \bottomrule
+    \end{tabular}
+    \caption{bcc-Gitterstruktur}
+  \end{subtable}
+  \begin{subtable}{.49\textwidth}
+      \centering
+        \vspace*{5mm}
+      \begin{tabular}{
+          S[table-format=3.0]
+          S[table-format=2.0]
+          S[table-format=1.3]}
+          \toprule
+          $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_\text{i}\, / \, N_1}$ \\ \midrule
+          111 &  3  & 1,000 \\
+          200 &  4  & 1,155 \\
+          220 &  8  & 1,633 \\
+          311 & 11  & 1,915 \\
+          222 & 12  & 2,000 \\
+          400 & 16  & 2,309 \\
+          331 & 19  & 2,517 \\
+          420 & 20  & 2,582 \\
+          422 & 24  & 2,828 \\
+          333 & 27  & 3,000 \\
+          511 & 27  & 3,000 \\
+          440 & 32  & 3,266 \\
+          531 & 35  & 3,416 \\
+          442 & 36  & 3,464 \\
+          600 & 36  & 3,464 \\
+          \bottomrule
+      \end{tabular}
+      \caption{fcc-Gitterstruktur}
+    \end{subtable}
+    \begin{subtable}{.49\textwidth}
+      \vspace*{5mm}
+        \centering
+    \begin{tabular}{
+        S[table-format=3.0]
+        S[table-format=2.0]
+        S[table-format=1.3]}
+        \toprule
+        $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_\text{i}\, / \, N_1}$ \\ \midrule
+        111 & 3  & 1,000 \\
+        220 & 8  & 1,633 \\
+        311 & 11 & 1,915 \\
+        400 & 16 & 2,309 \\
+        331 & 19 & 2,517 \\
+        422 & 24 & 2,828 \\
+        333 & 27 & 3,000 \\
+        511 & 27 & 3,000 \\
+        440 & 32 & 3,266 \\
+        531 & 35 & 3,416 \\
+        620 & 40 & 3,651 \\
+        533 & 43 & 3,786 \\
+        444 & 48 & 4,000 \\
+        551 & 51 & 4,123 \\
+        711 & 51 & 4,123 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Diamant-Gitterstruktur}
+  \end{subtable}
+    \caption{Auftretende Beugungsreflexe bei verschiedenen Gittertypen. Es werden jeweils die Miller'schen Indizes $hkl$, die Summe $N$ der einzelnen Werte $h$, $k$, $l$
+    und der Quotient $\sqrt[]{N_\text{i}/N_1}$
+    angegeben. Die Tabellen dienen als Referenzwerte, um die Kristallstruktur der Probe zu ermitteln.}
+    \label{tab:referenz}
+\end{table}
+
+
+$K_\beta$-Linie ergibt, können die Netzebenenabstände bestimmt werden. Anschließen wird das Verhältnis $d_1 / d_\text{i}$ für die verschiedenen Reflexe gebildet.\newline
+Damit die Gitterkonstante der Probe bestimmt werden kann, wird Gleichung \eqref{eq:d} in Gleichung \eqref{eq:bragg} eingesetzt. Es ergibt sich der Ausdruck
+\begin{equation}
+  \frac{\lambda}{2\sin(\theta)}\,\,\sqrt[]{h^2+k^2+l^2}=d\,\,\sqrt[]{N}=a.
+\end{equation}
+Durch Normieren dieses Ausdruck kann der Zusammenhang
+\begin{equation}
+\frac{d_1}{d_\text{i}}=\sqrt[]{N_\text{i}\, / \, N_1}
+\end{equation}
+ermittelt werden. Es wird deutlich, dass die gebildeten Verhältnisse $d_1 / d_\text{i}$ mit den Ausdrücken $\sqrt[]{N_\text{i}\, / \, N_1}$ aus Tabelle
+\ref{tab:referenz} verglichen werden können. Somit kann die Gitterstruktur der Probe ermittelt werden.
+Mit bekannter Gitterstruktur kann anschließend die Gitterkonstante der Probe berechnet werden. Es werden aus den einzelnen Messwerten die verschiedenen
+Gitterkonstanten ermittelt und anschließend gegen $\cos^2(\theta)$ aufgetragen. Dann wird eine lineare Ausgleichsrechnung durchgeführt, der y-Achsenabschnitt
+liefert dabei den Wert für die Gitterkonstante. Bei der linearen Ausgleichsrechnungen werden sowohl die Unsicherheiten auf die x-Werte, als auch die Unsicherheiten auf
+den y-Werten berücksichtigt.
+
+\subsection{Ergebnisse für Metall 2}
+
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{probe1.pdf}
+  \caption{metall}
+  \label{abb:metall}
+\end{figure}
+
+\subsection{Ergebnisse für Salz 2}
+
+In Tabelle \ref{tab:salz} sind die Messwerte für die Probe Salz 2 zu sehen. Zusätzlich sind die berechneten Winkel, die berechneten Gitterabstände und die
+daraus resultierenden Verhältnisse $d_1 / d_\text{i}$ zu erkennen.
+\begin{table}
+  \centering
+\begin{tabular}{
+  S[table-format=2.1(1)]
+  S[table-format=2.2(2)]
+  S[table-format=1.3(3)]
+  S[table-format=1.2(2)]}
+  \toprule
+  $\text{r / mm}$ & $\theta\text{ / } ^\circ$ &$\text{d}$ &  $\text{bla}$  \\ \midrule
+
+  \bottomrule
+\end{tabular}
+\caption{Messwerte und Ergebnisse für die Probe Salz 2. Es sind die Abstände der Braggreflexe, die Winkel $\theta$, die Netzebenenabstände, sowie die Verhältnisse
+$d_1 / d_\text{i}$ zu erkennen. In der letzten Spalte befinden sich die jeweiligen Werte für die Gitterkonstante $a$.}
+\label{tab:salz}
+\end{table}
+
+
+
+
+Ein Vergleich von $d_1 / d_\text{i}$ mit den $\sqrt[]{N_\text{i}\, / \, N_1}$-Spalten in Tabelle
+\ref{tab:referenz} zeigt, dass es sich bei der Probe um eine bcc-Gitterstruktur handelt. Es könnte sich somit um eine Cäsiumchlorid-Struktur handeln. Somit werden die
+Referenzwerte für die bcc-Gitterstruktur zur Berechnung der Gitterkonstanten verwendet. Die Werte für die Gitterkonstanten sind in der letzten Spalte von
+Tabelle \ref{tab:salz} zu finden. In Abbildung \ref{abb:salz} sind die einzelnen Gitterkonstanten gegen $\cos^2(\theta)$ aufgetragen. Die lineare Ausgleichsrechnung liefert
+einen y-Achsenabschnitt von
+\begin{equation}
+  a = 4,02\pm0,03.
+\end{equation}
+Dieser Wert ist das Ergebnis für die Gitterkonstante der Probe.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{probe2.pdf}
+  \caption{salz}
+  \label{abb:salz}
+\end{figure}
