@@ -8,7 +8,7 @@ scipy.odr zur Durchführung der lineare Ausgleichsrechnung benutzt.
 
 
 
-Der entwickelte Film enthält kreiförmige Braggreflexe, die charakteristisch für die jeweillige Probe sind. Anhand der Reflexe kann auf die Gitterstruktur der
+Der entwickelte Film enthält kreisförmige Braggreflexe, die charakteristisch für die jeweillige Probe sind. Anhand der Reflexe kann auf die Gitterstruktur der
 Probe geschlossen werden und somit die Gitterkonstante bestimmt werden.
 Als Referenzwerte werden die Miller'schen Indizes in Gleichung \eqref{eq:streuamplitude} variert und die Reflexe ermittelt, für die die Streuamplitude nicht verschwindet.
 Die Ergebnisse für
@@ -17,8 +17,7 @@ Nun sollen die Reflexe auf dem Film mit den Referenzwerten in der Tabelle vergli
 Vorteil dabei besteht darin, dass die Kamera einen Umfang von genau $\SI{360}{\milli\meter}$ besitzt. Somit können die Abstände direkt als Winkel
 $2\theta$ abgelesen werden. Mit Hilfe der Braggbedingung \eqref{eq:bragg} und der Wellenlänge der Röntgenstrahlung von
 $\lambda = \SI{1,54286}{\angstrom}$, welche sich aus dem Mittelwert der $K_\alpha$- und der
-
-\begin{table}[H]
+\begin{table}
   \centering
   \begin{subtable}{.49\textwidth}
       \centering
@@ -27,7 +26,7 @@ $\lambda = \SI{1,54286}{\angstrom}$, welche sich aus dem Mittelwert der $K_\alph
           S[table-format=2.0]
           S[table-format=1.3]}
           \toprule
-          $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_\text{i}\, / \, N_1}$ \\ \midrule
+          $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_i\, / \, N_1}$ \\ \midrule
           100 & 1   & 1,000 \\
           110 & 2   & 1,414 \\
           111 & 3   & 1,732 \\
@@ -54,7 +53,7 @@ $\lambda = \SI{1,54286}{\angstrom}$, welche sich aus dem Mittelwert der $K_\alph
         S[table-format=2.0]
         S[table-format=1.3]}
         \toprule
-        $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_\text{i}\, / \, N_1}$ \\ \midrule
+        $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_i\, / \, N_1}$ \\ \midrule
         110 & 2   & 1,000 \\
         200 & 4   & 1,414 \\
         211 & 6   & 1,732 \\
@@ -82,7 +81,7 @@ $\lambda = \SI{1,54286}{\angstrom}$, welche sich aus dem Mittelwert der $K_\alph
           S[table-format=2.0]
           S[table-format=1.3]}
           \toprule
-          $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_\text{i}\, / \, N_1}$ \\ \midrule
+          $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_i\, / \, N_1}$ \\ \midrule
           111 &  3  & 1,000 \\
           200 &  4  & 1,155 \\
           220 &  8  & 1,633 \\
@@ -110,7 +109,7 @@ $\lambda = \SI{1,54286}{\angstrom}$, welche sich aus dem Mittelwert der $K_\alph
         S[table-format=2.0]
         S[table-format=1.3]}
         \toprule
-        $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_\text{i}\, / \, N_1}$ \\ \midrule
+        $\text{hkl}$ & $\text{N}$ & $\sqrt[]{N_i\, / \, N_1}$ \\ \midrule
         111 & 3  & 1,000 \\
         220 & 8  & 1,633 \\
         311 & 11 & 1,915 \\
@@ -130,23 +129,21 @@ $\lambda = \SI{1,54286}{\angstrom}$, welche sich aus dem Mittelwert der $K_\alph
     \end{tabular}
     \caption{Diamant-Gitterstruktur}
   \end{subtable}
-    \caption{Auftretende Beugungsreflexe bei verschiedenen Gittertypen. Es werden jeweils die Miller'schen Indizes $hkl$, die Summe $N$ der einzelnen Werte $h$, $k$, $l$
-    und der Quotient $\sqrt[]{N_\text{i}/N_1}$
+    \caption{Auftretende Beugungsreflexe bei verschiedenen Gittertypen. Es werden jeweils die Miller'schen Indizes $hkl$, der Wert $N=h^2+k^2+l^2$
+    und der Quotient $\sqrt[]{N_i/N_1}$
     angegeben. Die Tabellen dienen als Referenzwerte, um die Kristallstruktur der Probe zu ermitteln.}
     \label{tab:referenz}
 \end{table}
-
-
-$K_\beta$-Linie ergibt, können die Netzebenenabstände bestimmt werden. Anschließen wird das Verhältnis $d_1 / d_\text{i}$ für die verschiedenen Reflexe gebildet.\newline
+$K_\beta$-Linie ergibt, können die Netzebenenabstände bestimmt werden. Anschließen wird das Verhältnis $d_1 / d_i$ für die verschiedenen Reflexe gebildet.\newline
 Damit die Gitterkonstante der Probe bestimmt werden kann, wird Gleichung \eqref{eq:d} in Gleichung \eqref{eq:bragg} eingesetzt. Es ergibt sich der Ausdruck
 \begin{equation}
   \frac{\lambda}{2\sin(\theta)}\,\,\sqrt[]{h^2+k^2+l^2}=d\,\,\sqrt[]{N}=a.
 \end{equation}
 Durch Normieren dieses Ausdruck kann der Zusammenhang
 \begin{equation}
-\frac{d_1}{d_\text{i}}=\sqrt[]{N_\text{i}\, / \, N_1}
+\frac{d_1}{d_i}=\sqrt[]{N_i\, / \, N_1}
 \end{equation}
-aufgestellt werden. Es wird deutlich, dass die gebildeten Verhältnisse $d_1 / d_\text{i}$ mit den Ausdrücken $\sqrt[]{N_\text{i}\, / \, N_1}$ aus Tabelle
+aufgestellt werden. Es wird deutlich, dass die gebildeten Verhältnisse $d_1 / d_i$ mit den Ausdrücken $\sqrt[]{N_i\, / \, N_1}$ aus Tabelle
 \ref{tab:referenz} verglichen werden können. Somit kann die passende Gitterstruktur der Probe ermittelt werden.
 Mit bekannter Gitterstruktur kann anschließend die Gitterkonstante der Probe berechnet werden. Es werden aus den einzelnen Messwerten die verschiedenen
 Gitterkonstanten ermittelt und anschließend gegen $\cos^2(\theta)$ aufgetragen. Dann wird eine lineare Ausgleichsrechnung durchgeführt, der y-Achsenabschnitt
@@ -156,18 +153,18 @@ den y-Werten berücksichtigt.
 \subsection{Ergebnisse für Metall 2}
 
 In Tabelle \ref{tab:metall} sind die Messwerte für die Probe Metall 2 zu sehen. Zusätzlich sind die berechneten Winkel, die berechneten Gitterabstände und die
-daraus resultierenden Verhältnisse $d_1 / d_\text{i}$ zu erkennen.\newline
-Ein Vergleich von $d_1 / d_\text{i}$ mit $\sqrt[]{N_\text{i}\, / \, N_1}$ zeigt, dass es sich bei der Probe um eine fcc-Gitterstruktur handelt. Der $222$ Reflex und
+daraus resultierenden Verhältnisse $d_1 / d_i$ zu erkennen.\newline
+Ein Vergleich von $d_1 / d_i$ mit $\sqrt[]{N_i\, / \, N_1}$ zeigt, dass es sich bei der Probe um eine fcc-Gitterstruktur handelt. Der $222$ Reflex und
 der $420$ Reflex konnte jedoch auf dem Film nicht wiedergefunden werden, da diese zu schwach sind.
 Somit werden die
 N-Werte für die fcc-Gitterstruktur zur Berechnung der Gitterkonstanten verwendet. Die Werte für die Gitterkonstanten sind in der letzten Spalte von
 Tabelle \ref{tab:metall} zu finden. In Abbildung \ref{abb:metall} sind die einzelnen Gitterkonstanten gegen $\cos^2(\theta)$ aufgetragen. Die lineare Ausgleichsrechnung liefert
 die Parameter
 \begin{align*}
-  m &= \,\,\,0,1\pm0,1~~~~~\text{und}\\
-  a &= 4,73\pm0,02
+  m &= \,\,\,\left(0,1\pm0,1\right)\si{\angstrom}~~~~~\text{und}\\
+  a &= \left(4,73\pm0,02\right)\si{\angstrom}
 \end{align*}
-Der Wert $a = 4,73\pm0,02$ für den y-Achsenabschnitt entspricht der Gitterkonstante der Probe.
+Der Wert $a = \left(4,73\pm0,02\right)\si{\angstrom}$ für den y-Achsenabschnitt entspricht der Gitterkonstante der Probe.
 
 
 \begin{table}[H]
@@ -181,7 +178,7 @@ Der Wert $a = 4,73\pm0,02$ für den y-Achsenabschnitt entspricht der Gitterkonst
   S[table-format=2]
   S[table-format=1.2(2)]}
   \toprule
-  $\text{r / mm}$ & $\theta\text{ / } ^\circ$ &$\text{d / }\si{\angstrom}$&{$d_1 / d_i\,\,/\,\, \si{\angstrom}$} & $\sqrt[]{N_\text{i}\, / \, N_1}_\text{fcc}$& $\text{N}$  &  $\text{a / }\si{\angstrom}$  \\ \midrule
+  $\text{r / mm}$ & $\theta\text{ / } ^\circ$ &$\text{d / }\si{\angstrom}$&{$d_1 / d_i\,\,/\,\, \si{\angstrom}$} & $\sqrt[]{N_i\, / \, N_1}_\text{fcc}$& $\text{N}$  &  $\text{a / }\si{\angstrom}$  \\ \midrule
   33    \pm  1,0    &     16,5 \pm 0,5  &  2,72 \pm 0,08  &    1,00 \pm 0,00     &   1,000 &  3   &    4,70 \pm 0,14       \\
   42    \pm  1,0    &     21,0 \pm 0,5  &  2,15 \pm 0,05  &    1,26 \pm 0,05     &   1,155 &  4   &    4,31 \pm 0,10       \\
   54    \pm  1,0    &     27,0 \pm 0,5  &  1,70 \pm 0,03  &    1,60 \pm 0,05     &   1,633 &  8   &    4,81 \pm 0,08       \\
@@ -196,7 +193,7 @@ Der Wert $a = 4,73\pm0,02$ für den y-Achsenabschnitt entspricht der Gitterkonst
   \bottomrule
 \end{tabular}
 \caption{Messwerte und Ergebnisse für die Probe Metall 2. Es sind die Abstände der Braggreflexe, die Winkel $\theta$, die Netzebenenabstände $d$, sowie die Verhältnisse
-$d_1 / d_\text{i}$ angegeben. Zusätzlich sind die Werte für $\sqrt[]{N_\text{i}\, / \, N_1}_\text{fcc}$ mit dem passenden $N$ aufgelistet, damit die Gitterstruktur erkennbar wird.
+$d_1 / d_i$ angegeben. Zusätzlich sind die Werte für $\sqrt[]{N_i\, / \, N_1}_\text{fcc}$ mit dem passenden $N$ aufgelistet, damit die Gitterstruktur erkennbar wird.
 In der letzten Spalte befinden sich die jeweiligen Werte für die Gitterkonstante $a$.}
 \label{tab:metall}
 \end{table}
@@ -213,7 +210,7 @@ In der letzten Spalte befinden sich die jeweiligen Werte für die Gitterkonstant
 \subsection{Ergebnisse für Salz 2}
 
 In Tabelle \ref{tab:salz} sind die Messwerte für die Probe Salz 2 zu sehen. Zusätzlich sind die berechneten Winkel, die berechneten Gitterabstände und die
-daraus resultierenden Verhältnisse $d_1 / d_\text{i}$ zu erkennen.
+daraus resultierenden Verhältnisse $d_1 / d_i$ zu erkennen.
 \begin{table}[H]
   \centering
 \begin{tabular}{
@@ -225,7 +222,7 @@ daraus resultierenden Verhältnisse $d_1 / d_\text{i}$ zu erkennen.
   S[table-format=2]
   S[table-format=1.2(2)]}
   \toprule
-  $\text{r / mm}$ & $\theta\text{ / } ^\circ$ &$\text{d / }\si{\angstrom}$ &{$d_1 / d_i\,\,\text{/}\,\, \si{\angstrom}$} & $\sqrt[]{N_\text{i}\, / \, N_1}_\text{bcc}$& $\text{N}$  &  $\text{a / }\si{\angstrom}$  \\ \midrule
+  $\text{r / mm}$ & $\theta\text{ / } ^\circ$ &$\text{d / }\si{\angstrom}$ &{$d_1 / d_i\,\,\text{/}\,\, \si{\angstrom}$} & $\sqrt[]{N_i\, / \, N_1}_\text{bcc}$& $\text{N}$  &  $\text{a / }\si{\angstrom}$  \\ \midrule
   32    \pm  1,0    &     16,0 \pm 0,5  &  2,80 \pm 0,09  &    1,00 \pm 0,00     &   1,000 &  2   &    4,00 \pm 0,10       \\
   46,5  \pm  1,0    &     23,3 \pm 0,5  &  1,95 \pm 0,04  &    1,43 \pm 0,05     &   1,414 &  4   &    3,91 \pm 0,08       \\
   56    \pm  1,0    &     28,0 \pm 0,5  &  1,64 \pm 0,03  &    1,70 \pm 0,06     &   1,732 &  6   &    4,02 \pm 0,07       \\
@@ -242,22 +239,22 @@ daraus resultierenden Verhältnisse $d_1 / d_\text{i}$ zu erkennen.
   \bottomrule
 \end{tabular}
 \caption{Messwerte und Ergebnisse für die Probe Salz 2. Es sind die Abstände der Braggreflexe, die Winkel $\theta$, die Netzebenenabstände $d$, sowie die Verhältnisse
-$d_1 / d_\text{i}$ angegeben. Zusätzlich sind die Werte für $\sqrt[]{N_\text{i}\, / \, N_1}_\text{bcc}$ mit dem passenden $N$ aufgelistet, damit die Gitterstruktur erkennbar wird.
+$d_1 / d_i$ angegeben. Zusätzlich sind die Werte für $\sqrt[]{N_i\, / \, N_1}_\text{bcc}$ mit dem passenden $N$ aufgelistet, damit die Gitterstruktur erkennbar wird.
 In der letzten Spalte befinden sich die jeweiligen Werte für die Gitterkonstante $a$.}
 \label{tab:salz}
 \end{table}
 
 
-Ein Vergleich von $d_1 / d_\text{i}$ mit $\sqrt[]{N_\text{i}\, / \, N_1}$ zeigt, dass es sich bei der Probe um eine bcc-Gitterstruktur handelt.
+Ein Vergleich von $d_1 / d_i$ mit $\sqrt[]{N_i\, / \, N_1}$ zeigt, dass es sich bei der Probe um eine bcc-Gitterstruktur handelt.
 Somit werden die
 Referenzwerte für die bcc-Gitterstruktur zur Berechnung der Gitterkonstanten verwendet. Die Werte für die Gitterkonstanten sind in der letzten Spalte von
 Tabelle \ref{tab:salz} zu finden. In Abbildung \ref{abb:salz} sind die einzelnen Gitterkonstanten gegen $\cos^2(\theta)$ aufgetragen. Die lineare Ausgleichsrechnung liefert
 die Parameter
 \begin{align*}
-  m &= -0,3\pm0,1~~~~~\text{und}\\
-  a &= \,\,4,15\pm0,04
+  m &= \left(-0,3\pm0,1\right)\si{\angstrom}~~~~~\text{und}\\
+  a &= \left(\,\,4,15\pm0,04\right)\si{\angstrom}
 \end{align*}
-Der Wert $a = 4,15\pm0,04$ für den y-Achsenabschnitt entspricht der Gitterkonstante der Probe.
+Der Wert $a = \left(4,15\pm0,04\right)\si{\angstrom}$ für den y-Achsenabschnitt entspricht der Gitterkonstante der Probe.
 
 \begin{figure}[H]
   \centering
